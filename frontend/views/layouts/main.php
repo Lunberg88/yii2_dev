@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use common\widgets\TestWidget;
 
 AppAsset::register($this);
 ?>
@@ -58,12 +59,16 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
-
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
-        <?= Alert::widget() ?>
+        <?= Alert::widget() ?><br>
+  <div class=mywidget">
+        <?= TestWidget::widget([
+            'message' => 'This is a static text-message for all avaible pages on this project!'
+            ]); ?>
+  </div>
         <?= $content ?>
     </div>
 </div>

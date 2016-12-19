@@ -4,6 +4,7 @@
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\ContactForm */
 
+use common\widgets\TestWidget;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
@@ -12,6 +13,12 @@ $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
+  <div class=mywidget">
+        <?= TestWidget::widget([
+            'message' => 'This is a additional static text-message only for two pages (about & contact) on this project!'
+            ]); ?>
+  </div>
+<br>
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
