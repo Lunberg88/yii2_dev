@@ -8,10 +8,12 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
+use frontend\assets\MyAsset;
 use common\widgets\Alert;
 use common\widgets\TestWidget;
 
 AppAsset::register($this);
+MyAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -69,8 +71,10 @@ AppAsset::register($this);
             'message' => 'This is a static text-message for all avaible pages on this project!'
             ]); ?>
   </div>
+
         <?= $content ?>
     </div>
+<div class="mywidget">Cry me!</div>
 </div>
 
 <footer class="footer">
