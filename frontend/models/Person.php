@@ -15,7 +15,7 @@ use Yii;
  *
  * @property Address[] $addresses
  */
-class person extends \yii\db\ActiveRecord
+class Person extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -45,11 +45,11 @@ class person extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'age' => 'Age',
-            'male' => 'Male',
-            'date' => 'Date',
+            'id' => Yii::t('app', 'ID'),
+            'name' => Yii::t('app', 'Name'),
+            'age' => Yii::t('app', 'Age'),
+            'male' => Yii::t('app', 'Male'),
+            'date' => Yii::t('app', 'Date'),
         ];
     }
 

@@ -1,18 +1,18 @@
 <?php
 
-namespace backend\controllers;
+namespace app\controllers;
 
 use Yii;
-use app\models\Address;
-use app\models\AddressSearch;
+use app\models\Person;
+use app\models\PersonSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * AddressController implements the CRUD actions for Address model.
+ * PersonController implements the CRUD actions for Person model.
  */
-class AddressController extends Controller
+class PersonController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class AddressController extends Controller
     }
 
     /**
-     * Lists all Address models.
+     * Lists all Person models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new AddressSearch();
+        $searchModel = new PersonSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class AddressController extends Controller
     }
 
     /**
-     * Displays a single Address model.
+     * Displays a single Person model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class AddressController extends Controller
     }
 
     /**
-     * Creates a new Address model.
+     * Creates a new Person model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Address();
+        $model = new Person();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -75,7 +75,7 @@ class AddressController extends Controller
     }
 
     /**
-     * Updates an existing Address model.
+     * Updates an existing Person model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class AddressController extends Controller
     }
 
     /**
-     * Deletes an existing Address model.
+     * Deletes an existing Person model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class AddressController extends Controller
     }
 
     /**
-     * Finds the Address model based on its primary key value.
+     * Finds the Person model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Address the loaded model
+     * @return Person the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Address::findOne($id)) !== null) {
+        if (($model = Person::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -4,25 +4,23 @@
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\ContactForm */
 
+use Yii;
 use common\widgets\TestWidget;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
+use yii\i18n\PhpMessageSource;
+use yii\i18n;
 
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
-  <div class=mywidget">
-        <?= TestWidget::widget([
-            'message' => 'This is a additional static text-message only for two pages (about & contact) on this project!'
-            ]); ?>
-  </div>
 <br>
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode(Yii::t('app', $this->title)) ?></h1>
 
     <p>
-        If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
+       <?= Yii::t('app', 'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.') ?>
     </p>
 
     <div class="row">
@@ -31,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
 
-                <?= $form->field($model, 'email') ?>
+                <?= $form->field($model, Yii::t('app', 'email')) ?>
 
                 <?= $form->field($model, 'subject') ?>
 
