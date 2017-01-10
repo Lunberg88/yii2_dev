@@ -10,10 +10,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'layout' => 'main',
-    'sourceLanguage' => 'en',
-    'language' => 'en',
-    'charset' => 'UTF-8',
+    'language' => 'en-US',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
@@ -29,7 +26,7 @@ return [
                  'app*' => [
                      'class' => 'yii\i18n\PhpMessageSource',
                      'basePath' => '@app/messages',
-                    // 'sourceLanguage' => 'en-US',
+                     //'sourceLanguage' => 'en-US',
                      'fileMap' => [
                          'app'       => 'app.php',
                          'app/error' => 'error.php',

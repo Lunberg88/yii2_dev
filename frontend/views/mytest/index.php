@@ -1,16 +1,21 @@
 <?php
 /* @var $this yii\web\View */
 
+use yii\web\View;
+use Yii;
+use yii\i18n\PhpMessageSource;
+use yii\i18n;
 use app\models\Address;
 use app\models\Person;
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
-?>
 
-<h1>Mytest</h1>
+?>
+    <html lang=<?= Yii::$app->language = "ru-RU" ?>>
+<h1><?= Html::encode(Yii::t('app', 'MyTest')) ?></h1>
 
 <p>
-    TestMy
+    TestMy  | <?= Html::encode(Yii::t('app', 'name')) ?>
 </p>
 <br>
 <div>

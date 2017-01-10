@@ -19,7 +19,7 @@ MyAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang=<?= Yii::$app->language = "ru-RU" ?>>
+<html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +34,7 @@ MyAsset::register($this);
     <?php
     NavBar::begin([
         'brandLabel' => Yii::t('app', 'My Company'),
-        'brandUrl' => Yii::$app->homeUrl,
+        'brandUrl' => Yii::t('app', Yii::$app->homeUrl),
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
@@ -52,7 +52,7 @@ MyAsset::register($this);
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
+                Yii::t('app', 'Logout').' (' . Yii::$app->user->identity->username . ')',
                 ['class' => 'btn btn-link logout']
             )
             . Html::endForm()
@@ -69,7 +69,6 @@ MyAsset::register($this);
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?><br>
-      <?= Yii::t('app', 'Home') ?> | <?= Yii::t('app', 'Hello friend') ?> | <?= Yii::t('app', 'You are welcome') ?> | <?= Yii::t('app', 'Mytest') ?>
   <div class="mywidget">
         <?= TestWidget::widget([
 //$options = ['class' => 'mywidget'],
@@ -85,7 +84,7 @@ MyAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; <?= Yii::t('app', 'My Company') ?> <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right"><?= Yii::powered() ?> <?= $this->render('main/select-language') ?></p>
     </div>
 </footer>
 

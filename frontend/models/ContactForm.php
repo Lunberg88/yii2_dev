@@ -3,6 +3,8 @@
 namespace frontend\models;
 
 use Yii;
+use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
 use yii\base\Model;
 
 /**
@@ -38,7 +40,11 @@ class ContactForm extends Model
     public function attributeLabels()
     {
         return [
-            'verifyCode' => 'Verification Code',
+            'verifyCode' => Yii::t('app', 'Verification Code'),
+            'name' => Yii::t('app', 'name'),
+            'email' => Yii::t('app', 'email'),
+            'subject' => Yii::t('app', 'subject'),
+            'body' => Yii::t('app', 'body'),
         ];
     }
 

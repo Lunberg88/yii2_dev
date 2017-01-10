@@ -18,15 +18,22 @@
  */
 return [
      /* Logo   */
-     'My Company' => 'Моя Компания',
+    'My Company' => 'Моя Компания',
      /* Navigation's (url's) */
-     'About' => 'О нас',
-     'Contact' => 'Контакты',
-     'MyTest' => 'МойТест',
-     'Login' => 'Авторизация',
-     'Signup' => 'Регистрация',
-     'Logout' => 'Выход',
+    'About' => 'О нас',
+    'Contact' => 'Контакты',
+    'MyTest' => 'МойТест',
+    'Login' => 'Авторизация',
+    'Signup' => 'Регистрация',
+    'Logout' => 'Выход',
      /* rand msg */
+    'Heading' => 'Заголовок',
+    'Get started with Yii' => 'Начните работу с Yii',
+    'Congratulations' => 'Поздравляем',
+    'Yii Documentation' => 'Yii Документация',
+    'Yii Forum' => 'Yii Форум',
+    'Yii Extensions' => 'Yii Расширения',
+    'You have successfully created your Yii-powered application' => 'Вы удачно установили приложение Yii-powered приложение',
     'Hello friend' => 'Привет, друг',
     'Mytest' => 'Мой тест',
     'You are welcome' => 'Добро пожаловать',
@@ -34,6 +41,11 @@ return [
      /* Contact's form */
     'email' => 'е-меил',
     'name' => 'Имя',
+    'subject' => 'Заголовок сообщения',
+    'body' => 'Текст сообщения',
+    'Verification Code' => 'Проверочный код',
+    'Submit' => 'Отправить',
+    'If you forgot your password you can' => 'Если вы забилы свой пароль, Вы можете',
     'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.' => 'Если у вас есть пожелания или свежие бизнес-идеи или вопросы, заполните следующие поля что бы связаться с нами. Спасибо ;)',
     '{attribute} must be equal to "{compareValueOrAttribute}".' => 'Значение «{attribute}» должно быть равно «{compareValueOrAttribute}».',
     '{attribute} must be greater than "{compareValueOrAttribute}".' => 'Значение «{attribute}» должно быть больше значения «{compareValueOrAttribute}».',

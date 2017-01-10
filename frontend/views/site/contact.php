@@ -5,12 +5,16 @@
 /* @var $model \frontend\models\ContactForm */
 
 use Yii;
-use common\widgets\TestWidget;
+use yii\web\View;
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
+use common\widgets\TestWidget;
+use yii\i18n;
+use yii\i18n\PhpMessageSource;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
-use yii\i18n\PhpMessageSource;
-use yii\i18n;
+
+
 
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
@@ -29,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
 
-                <?= $form->field($model, Yii::t('app', 'email')) ?>
+                <?= $form->field($model, 'email')  ?>
 
                 <?= $form->field($model, 'subject') ?>
 
@@ -40,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ]) ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                    <?= Html::submitButton(Yii::t('app', 'Submit'), ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                 </div>
 
             <?php ActiveForm::end(); ?>
