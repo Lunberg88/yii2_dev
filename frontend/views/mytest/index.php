@@ -11,7 +11,6 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 
 ?>
-    <html lang=<?= Yii::$app->language = "ru-RU" ?>>
 <h1><?= Html::encode(Yii::t('app', 'MyTest')) ?></h1>
 
 <p>

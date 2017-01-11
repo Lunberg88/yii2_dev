@@ -26,17 +26,24 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
+                'only' => ['logout', 'signup', 'login', 'guests', 'logged'],
                 'rules' => [
                     [
-                        'actions' => ['signup'],
+                        'actions' => ['signup', 'login', 'guests'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout', 'logged'],
                         'allow' => true,
                         'roles' => ['@'],
+                    ],
+                    [
+                        'actions' => ['special-callback'],
+                        'allow' => true,
+                        'matchCallback' => function ($rule, $action) {
+                            return date('d-m') === '11-01';
+                        }
                     ],
                 ],
             ],
@@ -75,6 +82,26 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    /**
+    * Test action for isLoggin
+    *
+    * @return mixed
+    */
+    public function actionGuests()
+    {
+        return $this->render('guests');
+    }   
+    
+    /**
+    * Test action for isGuest
+    *
+    * @return mixed
+    */
+    public function actionLogged()
+    {
+        return $this->render('logged');
+    }   
+    
     /**
      * Logs in a user.
      *

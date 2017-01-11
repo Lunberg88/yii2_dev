@@ -25,8 +25,10 @@ return [
     'MyTest' => 'МойТест',
     'Login' => 'Авторизация',
     'Signup' => 'Регистрация',
+    'Address' => 'Адресса',
     'Logout' => 'Выход',
      /* rand msg */
+    'Profile' => 'Профиль',
     'Heading' => 'Заголовок',
     'Get started with Yii' => 'Начните работу с Yii',
     'Congratulations' => 'Поздравляем',
@@ -38,7 +40,23 @@ return [
     'Mytest' => 'Мой тест',
     'You are welcome' => 'Добро пожаловать',
     'This is a static text-message for all avaible pages on this project!' => 'Это статическое тестовое сообщение, которое доступно на этом проэкте!',
-     /* Contact's form */
+    /* ResetPassword Form */
+    'Request password reset' => 'Восстановление пароля',
+    'Please fill out your email. A link to reset password will be sent there' => 'Пожалуйста, введите Ваш email, ссылка на восстановление пароля будет выслана на Ваш email',
+    'Send' => 'Отправить',
+    'There is no user with such email.' => 'Нет пользователя с таким email.',
+    /* Auth Form */
+    'reset it' => 'сбросить пароль',
+    'Remember Me' => 'Запомнить меня',
+    'Login' => 'Авторизироваться',
+    'Please fill out the following fields to login' => 'Пожалуйста, заполните следующие поляниже, для авторизации ',
+    /* SignUp Form */
+    'username' => 'Имя пользователя',
+    'first_name' => 'Имя',
+    'last_name' => 'Фамилия',
+    'password' => 'Пароль',
+    'Please fill out the following fields to signup' => 'Пожалуйста заполните поля для регистрации, ниже',
+    /* Contact's form */
     'email' => 'е-меил',
     'name' => 'Имя',
     'subject' => 'Заголовок сообщения',
