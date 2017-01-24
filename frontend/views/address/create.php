@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model app\models\Address */
 
 $this->title = Yii::t('app', 'Create Address');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Addresses'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Address'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="address-create">

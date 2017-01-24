@@ -17,17 +17,24 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-     /* Logo   */
+    /* Logo   */
     'My Company' => 'Моя Компания',
-     /* Navigation's (url's) */
+    /* News */
+    'News' => 'Новости',
+    'Read more' => 'читать далее',
+    /* Navigation's (url's) */
     'About' => 'О нас',
     'Contact' => 'Контакты',
     'MyTest' => 'МойТест',
     'Login' => 'Авторизация',
     'Signup' => 'Регистрация',
     'Address' => 'Адресса',
+    'Person' => 'Клиенты',
     'Logout' => 'Выход',
      /* rand msg */
+    'Create Address' => 'Добавить адресс',
+    'Search' => 'Поиск',
+    'Reset' => 'Сбросить',
     'Profile' => 'Профиль',
     'Heading' => 'Заголовок',
     'Get started with Yii' => 'Начните работу с Yii',

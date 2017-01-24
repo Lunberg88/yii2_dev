@@ -41,6 +41,9 @@ MyAsset::register($this);
     ]);
     $menuItems = [
         ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']],
+        ['label' => Yii::t('app', 'News'), 'url' => ['/news']],
+        ['label' => Yii::t('app', 'Address'), 'url' => ['/address']],
+        ['label' => Yii::t('app', 'Person'), 'url' => ['/person']],
         ['label' => Yii::t('app', 'About'), 'url' => ['/site/about']],
         ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
         ['label' => Yii::t('app', 'MyTest'), 'url' => ['/mytest']],

@@ -33,6 +33,7 @@ class AddressController extends Controller
      * Lists all Address models.
      * @return mixed
      */
+/*
     public function actionIndex()
     {
         $searchModel = new AddressSearch();
@@ -43,6 +44,18 @@ class AddressController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+*/
+/**
+* @ display all rows
+*/
+    public function actionIndex()
+    {
+        $address = new Address();
+        return $this->render('main', [
+            'addresss' => $address->getAllAddresses(),
+        ]);
+    }
+
 
     /**
      * Displays a single Address model.
@@ -66,6 +79,7 @@ class AddressController extends Controller
         $model = new Address();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            Yii::$app->RequestCrawler->writeData($model);
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

@@ -3,6 +3,10 @@
 namespace app\models;
 
 use Yii;
+use yii\data\ActiveDataProvider;
+use yii\db\Query;
+use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "address".
@@ -62,5 +66,13 @@ class Address extends \yii\db\ActiveRecord
     public function getUser()
     {
         return $this->hasOne(Person::className(), ['id' => 'user_id']);
+    }
+
+        public function getAllAddresses()
+    {
+        return new ActiveDataProvider([
+            'query' => Address::find(),
+         //       ->where(['id' => self::CHECK_ID])
+        ]);
     }
 }

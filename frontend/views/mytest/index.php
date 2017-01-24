@@ -12,7 +12,6 @@ use yii\helpers\ArrayHelper;
 
 ?>
 <h1><?= Html::encode(Yii::t('app', 'MyTest')) ?></h1>
-
 <p>
     TestMy  | <?= Html::encode(Yii::t('app', 'name')) ?>
 </p>

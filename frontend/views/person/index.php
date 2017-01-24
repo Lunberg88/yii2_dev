@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\PersonSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'People');
+$this->title = Yii::t('app', 'Person');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="person-index">

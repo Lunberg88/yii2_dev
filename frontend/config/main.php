@@ -16,6 +16,17 @@ return [
     'charset' => 'UTF-8',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+    /*
+        'view' => [
+            'theme' => [
+                'basePath' => '@frontend/themes/newtheme',
+                'baseUrl' => '@frontend/themes/newtheme',
+                'pathMap' => [
+                    '@frontend/views' => '@frontend/themes/newtheme',
+                ],
+            ],
+        ],
+    */
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
@@ -52,6 +63,10 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
+        ],
+
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
         ],
         
         'urlManager' => [
