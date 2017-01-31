@@ -79,7 +79,8 @@ class AddressController extends Controller
         $model = new Address();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            Yii::$app->RequestCrawler->writeData($model);
+          //  Yii::$app->RequestCrawler->writeData($model);
+            Yii::$container->get('Crawler')->serializer->writeData($model);
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
