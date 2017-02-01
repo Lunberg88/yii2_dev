@@ -8,5 +8,5 @@ Yii::$container->set(\common\components\SerializerInterface::class, \common\comp
 Yii::$container->set('Crawler',
    [
     'class' => \common\components\Crawler::class,
-    'path' => '\frontend\common\data.json',
+    'path' => '/files/',
     ]);

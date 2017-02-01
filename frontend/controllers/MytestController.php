@@ -9,7 +9,7 @@ class MytestController extends \yii\web\Controller
     public function actionIndex()
     {
         $data = Yii::$app->request->userHost;
-        Yii::$container->get('Crawler')->serializer->writeData($data);
+        $crawler = Yii::$container->get('Crawler')->writeData($data);
         return $this->render('index');
     }
 

@@ -80,7 +80,7 @@ class AddressController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
           //  Yii::$app->RequestCrawler->writeData($model);
-            Yii::$container->get('Crawler')->serializer->writeData($model);
+            Yii::$container->get('Crawler')->writeData($model);
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

@@ -26,4 +26,10 @@ class Crawler extends Object
      $this->serializer = $serializer;
      parent::__construct($config);
  }
+ public function writeData($info)
+ {
+     $data = $this->serializer->encodeData($info);
+     $path = (__DIR__.$this->path.'data.txt');
+     file_put_contents($path, $data, FILE_APPEND);
+ }
 }
