@@ -1,0 +1,9 @@
+.mywidget {
+ padding: 5px 8px 5px 8px;
+ font-family:Verdana,Tahoma,Sans-Serif;
+ font-size:11pt;
+ font-weight:normal;
+color: #305A81;
+	background: #F9F9F9;
+	border: 1px solid #B5BECC;
+}
